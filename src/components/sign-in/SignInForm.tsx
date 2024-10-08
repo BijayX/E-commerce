@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { VscEyeClosed, VscEye } from "react-icons/vsc";
 import login from '../../assets/login2.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SignInForm: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -98,7 +99,7 @@ const SignInForm: React.FC = () => {
             <div>
               <button
                 type="submit"
-                className="w-full bg-black text-white py-3 px-4 rounded-md hover:bg-black"
+                className="w-full bg-black text-white py-3 px-4 rounded-md hover:bg-black" onClick={()=>navigate("/")}
               >
                 Login
               </button>
