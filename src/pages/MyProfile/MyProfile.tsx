@@ -30,7 +30,7 @@ const InputField: React.FC<InputFieldProps> = ({ label, value, disabled = true }
 
 // Profile Page Component
 const MyProfile: React.FC = () => {
-  const [profileData, setProfileData] = useState<ProfileData>({
+  const [profileData] = useState<ProfileData>({
     firstName: 'Robert',
     lastName: 'Fox',
     phone: '(252) 555-0126',

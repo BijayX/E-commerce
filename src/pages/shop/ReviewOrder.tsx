@@ -25,7 +25,7 @@ interface ReviewOrderProps {
   estimatedDelivery: string;
 }
 
-const ReviewOrder: React.FC = () => {
+const ReviewOrder: React.FC<ReviewOrderProps> = () => {
   const [discountCode, setDiscountCode] = React.useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const deliveryCharge = 5.00;
